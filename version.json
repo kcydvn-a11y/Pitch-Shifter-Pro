@@ -1,0 +1,18 @@
+{
+  "latest_version": "2.706.2068",
+  "release_date": "2026-07-06",
+  "download_url": "https://github.com/ThaiThongSJ/Pitch-Shifter-Daimon/raw/refs/heads/main/Pitch%20Shifter%20Daimon%20V2.607.2068%20FINAL.zip",
+  "announcement": {
+    "title": "⚡ ZÖLZER AT2040 ULTIMATE PRO v2.706.2068",
+    "message": "Phiên bản này tập trung nâng cao chất lượng âm thanh và tối ưu hiệu năng tổng thể",
+    "changelog": [
+      "Cải tiến xử lý những bài hát từ AI: Loại bỏ hoàn toàn tình trạng hỗn loạn node, mang lại âm thanh sạch, mượt và tự nhiên.",
+      "Studio Equalizer Supreme AI Matrix 2.0 - Xử lý âm thanh thông minh, chi tiết đến từng nốt nhạc.",
+      "Zero-GC Low-Latency Engine: Triệt tiêu độ trễ, ổn định cực cao ngay cả khi CPU tải nặng.",
+      "YouTube NonStop Ultra Mode: Phát mượt như bản gốc, không giật, không quảng cáo.",
+      "Audio-Technica AT2040 PureGenix V2 Signature: Âm thanh ấm, trong, đầy màu sắc và sức sống."
+    ],
+    "youtube_link": "https://youtu.be/fgNlHcOxvxI",
+    "show_popup": true
+  }
+}

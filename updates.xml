@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+  <app appid='cfbmpcpjpgkjehoodbhbkdefhmkblhbf'>
+    <updatecheck codebase='https://thaithongsj.github.io/Pitch-Shifter-Daimon/Pitch%20Shifter%20Daimon%20V2.607.2038%20FINAL.crx' version='2.706.2038' />
+  </app>
+</gupdate>

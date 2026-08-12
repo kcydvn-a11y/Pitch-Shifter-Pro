@@ -1,0 +1,10 @@
+{
+  "blacklist": {
+    "": "gian_lan_karaoke",
+    "abc-id-khac": "nghi_van_tamper"
+  },
+  "revokedKeys": {
+    "KEY-123456": "refunded",
+    "KEY-ABC-789": "leaked"
+  }
+}
