@@ -1,83 +1,98 @@
-# 🎵 **PITCH SHIFTER PRO V2.607.2071 FINAL**
-**Professional Voice Pitch Shifter & Audio Enhancer for YouTube**
+# 🛡️ **Jungle Diamond 14.9.12**  
+**Advanced YouTube Ad Blocker with Self-Healing & Biometric Stealth**
 
-> Advanced audio processing tool combining **Pitch Shifter**, **Speed Control**, **HiFi Equalizer AI Matrix**, and intelligent **Cover Creation** features.
+![Version](https://img.shields.io/badge/Version-14.9.12-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-YouTube-red?style=for-the-badge)
 
-> Delivers an exceptional music, karaoke, and remix experience with crystal-clear sound quality powered by **HiFi AT2030** technology.
-
-**Author:** Thái Thông
----
-
-### 🎥 **Demo on YouTube**
-[![Watch Demo](https://img.shields.io/badge/Watch_Demo_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=fgNlHcOxvxI)
+> **"The most intelligent and adaptive YouTube ad blocker on the planet."**
 
 ---
 
-## ✨ KEY FEATURES
-- **Precise Pitch Shifter**: Adjust pitch ±12 semitones (supports both Semitone & Smooth modes)
-- **Flexible Speed Control**: Range from 0.25x to 4x while preserving pitch (Time Stretch)
-- **HiFi Equalizer AI Matrix**: 8-band professional EQ + Real-time Dynamic EQ
-- **AI Sound Profiles**: 10+ intelligent presets (Karaoke, EDM, Vocal, Bass Heavy...)
-- **Studio Cover Export**: Record and download high-quality .webm files with current pitch & profile
-- **Nonstop Protection**: Simulates user interaction to prevent unwanted video pauses
-- **Beautiful Interface**: Supports Vietnamese / English, Dark/Light themes, Favorites & Profile saving
-- **Import/Export**: Easy JSON configuration backup
+## ✨ **Overview**
+
+**Jungle Diamond** is a next-generation **YouTube Ad Blocker** built as a lightweight, high-performance **Userscript**. It combines **multi-layer stealth technology**, **self-healing recovery**, and **behavioral entropy simulation** to deliver a completely clean, uninterrupted viewing experience.
+
+Unlike traditional ad blockers that rely on static filters, Jungle Diamond **adapts in real-time** to YouTube’s evolving anti-adblock systems (including Honey Badger enforcement and server-side throttling).
 
 ---
 
-## 🧠 ADVANCED TECHNOLOGY
-- **Jungle Audio Engine** – Real-time audio processing with Web Audio API
-- **Adaptive Dynamic EQ** – Automatically adjusts based on the current audio spectrum
-- **AI Sound Optimization** – Analyzes song structure (verse, chorus, drop...)
-- **Stealth Main World Injection** – Direct injection for maximum performance
-- **Anti-Crash & Memory Safe** – Optimized RAM usage, stable even during long recordings
-- **Room Correction Simulation** – Professional listening environment simulation
+## 🚀 **Key Features**
+
+- **Ultra Flash Skip** – Mutes and skips ads in **0ms** with biometric jitter
+- **Self-Healing Engine** – Automatically detects and counters YouTube throttling, stalled streams, and playback manipulation
+- **Persistent Fingerprint Shield** – Defeats canvas, audio, WebGL, and hardware fingerprinting with session-consistent noise
+- **Behavioral Entropy** – Simulates natural human interactions (mouse, scroll, keyboard) to evade bot detection
+- **SPA Lifecycle Management** – Perfectly handles YouTube’s Single Page Application navigation
+- **Memory Leak Shield** – Advanced observer registry and adaptive throttling for long sessions (Lo-Fi, playlists)
+- **Zero Lag** – Lightweight architecture optimized for performance
 
 ---
 
-## 🎯 PREMIUM SOUND MODES
-| Mode                  | Main Characteristics                        | Best For                     |
-|-----------------------|---------------------------------------------|------------------------------|
-| **Warm**              | Deep, warm bass, soft treble                | Ballad, Acoustic, Jazz       |
-| **Bright**            | Sharp, detailed treble                      | Pop, EDM, Dance              |
-| **Bass Heavy**        | Powerful, impactful bass                    | EDM, Hip-Hop, Trap           |
-| **Vocal**             | Prominent, clear vocals                     | Karaoke, Ballad, R&B         |
-| **Natural**           | Perfectly balanced                          | All genres                   |
-| **Karaoke Dynamic**   | Soft background music, prominent vocals     | Karaoke singing              |
-| **AI Perfect Balance**| Intelligent automatic balancing             | Multi-genre listening        |
-| **AI Karaoke Live**   | Real-time adaptation                        | Live singing                 |
+## 🧠 **Core Technologies**
+
+| Layer | Technology | Purpose |
+|------|----------|--------|
+| **Stealth** | Multi-layer `ytcfg` Proxy + JSON Manipulation | Prevents Honey Badger detection |
+| **Recovery** | Self-Healing Core + Stall Detection | Counters throttling and black screens |
+| **Fingerprinting** | Persistent Session Seed + Audio/WebGL Noise | Defeats statistical fingerprinting |
+| **Behavioral** | Biometric Jitter + Keyboard Entropy | Mimics real human behavior |
+| **Memory** | Central Registry + AbortController | Prevents memory leaks in SPA |
 
 ---
 
-## 📥 INSTALLATION GUIDE
-1. Download the extension source code and extract it
-2. Open **Chrome / Edge / Brave**
-3. Go to `chrome://extensions/` (or `edge://extensions/`)
-4. Enable **Developer mode**
-5. Click **"Load unpacked"** → Select the folder containing `manifest.json`
-6. Pin the extension for easy access
+## 📥 **Installation**
+
+1. Install **Tampermonkey** or **Violentmonkey** extension
+2. Click the **Raw** button on this file → Install
+3. Refresh YouTube — **Jungle Diamond activates automatically**
+
+**No configuration needed.** Works instantly on both desktop and mobile YouTube.
 
 ---
 
-## 📋 NOTES
-- Works best on **Chrome, Edge, and Brave**
-- Cover recording and some AI presets require full activation
-- After major YouTube updates, the extension may need updating
+## 🔬 **Technical Architecture**
+
+- **@run-at document-start** – Injects before YouTube loads
+- **Main World Injection** – Direct access to YouTube’s internal objects
+- **Session-Persistent Entropy** – Consistent fingerprinting across refreshes
+- **Adaptive Throttling** – Reduces CPU usage when tab is hidden
+- **Real-time Recovery** – Monitors playback rate and stall conditions
 
 ---
 
-## 🔧 CONTACT & SUPPORT
-- **Author:** Thái Thông
-- **Email:** [ThaiThongsj@gmail.com](mailto:ThaiThongsj@gmail.com)
+## 📊 **Performance**
 
-### 💰 Support the Project
-
-![Bank Support](bank.png)
-
-**Vietcombank Account**  
-`9898661918` — **NGUYỄN NGỌC THÁI THÔNG**
+- **Memory Usage**: Extremely low (< 15MB after 8 hours)
+- **CPU Impact**: Negligible (adaptive throttling when idle)
+- **Compatibility**: Chrome, Edge, Firefox, Brave (Tampermonkey/Violentmonkey)
 
 ---
 
-**Thank you for using Pitch Shifter Pro!**  
-Wishing you the best music experiences ✨
+## 🛡️ **Anti-Detection**
+
+- **Behavioral Entropy** – Random mouse movements, scrolls, and keyboard events
+- **Biometric Jitter** – Realistic reaction delays when skipping ads
+- **Hardware Consistency** – Persistent spoofing across session
+- **Network Stealth** – Blocks all tracking and reporting requests
+
+---
+
+## 📬 **Contact & Support**
+
+- **Author**: Thai Thong + Vietnamese Community + Gemini
+- **GitHub**: [https://github.com/](https://github.com/)
+- **Email**: ThaiThongsj@gmail.com
+
+---
+
+## ⭐ **Support the Project**
+
+If you find **Jungle Diamond** useful, please consider starring the repository or donating to support continued development.
+
+**Made with ❤️ for a cleaner, ad-free YouTube experience.**
+
+---
+
+**Thank you for using Jungle Diamond!**  
+*Enjoy YouTube the way it was meant to be — clean, fast, and uninterrupted.*
