@@ -3,8 +3,7 @@
 
 ![App Preview](app.jpg)
 
-> Công cụ xử lý âm thanh cao cấp kết hợp **Pitch Shifter**, **Điều khiển tốc độ**, **HiFi Equalizer AI Matrix** và tính năng **Tạo Cover** thông minh.
-
+> Công cụ xử lý âm thanh cao cấp kết hợp **Pitch Shifter**, **Điều khiển tốc độ**, **HiFi Equalizer AI Matrix** và tính năng **Tạo Cover** thông minh.  
 > Mang đến trải nghiệm nghe nhạc – karaoke – remix đỉnh cao với chất lượng âm thanh tinh khiết nhờ công nghệ **HiFi AT2030**.
 
 **Tác giả:** Thái Thông
@@ -22,7 +21,7 @@
 - **Điều khiển tốc độ linh hoạt**: Từ 0.25x đến 4x, giữ nguyên cao độ (Time Stretch)
 - **HiFi Equalizer AI Matrix**: 8 dải tần chuyên nghiệp + Dynamic EQ thích ứng thời gian thực
 - **AI Sound Profiles**: Hơn 10 preset thông minh (Karaoke, EDM, Vocal, Bass Heavy...)
-- **Studio Cover Export**: Ghi và tải file .webm chất lượng cao với pitch + profile hiện tại
+- **Studio Cover Export**: Ghi và tải file `.webm` chất lượng cao với pitch + profile hiện tại
 - **Nonstop Protection**: Mô phỏng tương tác người dùng, chống video bị pause đột ngột
 - **Giao diện đẹp**: Hỗ trợ tiếng Việt / English, Dark/Light theme, Favorites & lưu Profile
 - **Import / Export**: Sao lưu cấu hình JSON dễ dàng
