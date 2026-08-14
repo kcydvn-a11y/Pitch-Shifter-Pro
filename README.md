@@ -64,6 +64,13 @@
 6. Ghim extension để dễ sử dụng
 
 ---
+**Link tải nhanh (Google Drive):**  
+https://drive.google.com/drive/folders/1PR30_2BOoGzBlmfluM2cpm8rJYRwITF9?usp=sharing
+
+[![PITCH SHIFTER PRO V2.607.2079 FINAL](https://img.shields.io/badge/Mobile-V2.607.2079-red?style=for-the-badge&logo=android)](https://drive.usercontent.google.com/download?id=1jkk5Tr3Ecs74nHBpSzFnXYaemyCdc02k&export=download&confirm=t))
+
+
+---
 
 ## 📋 LƯU Ý
 
