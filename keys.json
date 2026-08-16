@@ -1,10 +1,13 @@
 {
+  "strictMode": true,
+  "whitelist": {
+    "MA_DEVICE_ID_CHO_PHEP_1": "User VIP 1",
+    "MA_DEVICE_ID_CHO_PHEP_2": "User VIP 2"
+  },
   "blacklist": {
-    "": "gian_lan_karaoke",
-    "abc-id-khac": "nghi_van_tamper"
+    "MA_DEVICE_ID_BI_KHOA": "Lý do khóa"
   },
   "revokedKeys": {
-    "KEY-123456": "refunded",
-    "KEY-ABC-789": "leaked"
+    "KEY_XAC_THUC_BI_THU_HOI": "Key bẻ khóa"
   }
 }
