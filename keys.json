@@ -1,6 +1,6 @@
 {
   "systemDisabled": false,
-  "strictMode": true,
+  "strictMode": false,
   "whitelist": {
     "8fed4d2784282fee37493059fe9d5dbd": "User VIP 1"
   },
