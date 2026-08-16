@@ -2,7 +2,7 @@
   "systemDisabled": false,
   "strictMode": true,
   "whitelist": {
-    "MA_DEVICE_ID_VIP_1": "User VIP 1"
+    "8fed4d2784282fee37493059fe9d5dbd": "User VIP 1"
   },
   "blacklist": {
     "MA_DEVICE_ID_kHOA": "Tài khoản bị khóa do vi phạm"
