@@ -5,7 +5,7 @@
     "MA_DEVICE_ID_VIP_1": "User VIP 1"
   },
   "blacklist": {
-    "8fed4d2784282fee37493059fe9d5dbd": "Tài khoản bị khóa do vi phạm"
+    "MA_DEVICE_ID_kHOA": "Tài khoản bị khóa do vi phạm"
   },
   "revokedKeys": {
     "KEY_XAC_THUC_BI_THU_HOI": "Key bẻ khóa"
