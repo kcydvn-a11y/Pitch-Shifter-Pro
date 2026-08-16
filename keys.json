@@ -1,11 +1,11 @@
 {
-  "strictMode": true,
+  "systemDisabled": false,
+  "strictMode": false,
   "whitelist": {
-    "MA_DEVICE_ID_CHO_PHEP_1": "User VIP 1",
-    "MA_DEVICE_ID_CHO_PHEP_2": "User VIP 2"
+    "MA_DEVICE_ID_VIP_1": "User VIP 1"
   },
   "blacklist": {
-    "MA_DEVICE_ID_BI_KHOA": "Lý do khóa"
+    "MA_DEVICE_ID_BI_KHOA": "Spam / Hack"
   },
   "revokedKeys": {
     "KEY_XAC_THUC_BI_THU_HOI": "Key bẻ khóa"
