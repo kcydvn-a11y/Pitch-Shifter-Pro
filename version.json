@@ -1,16 +1,17 @@
 {
-  "latest_version": "2.706.2084",
-  "release_date": "2026-08-14",
+  "latest_version": "2.706.2085",
+  "release_date": "2026-09-09",
   "download_url": "https://drive.usercontent.google.com/download?id=1v504PAXN7tvY530I2cj-pDwlVRBgse5Z&export=download&confirm=t",
   "announcement": {
     "title": "⚡ ZÖLZER AT2040 ULTIMATE PRO V2.607.2084",
-    "message": "Phiên bản này tập trung nâng cao chất lượng âm thanh và tối ưu hiệu năng tổng thể",
+    "message": "Bản vá lớn: khôi phục hoàn toàn độ trong trẻo của giọng hát và cân bằng lại âm thanh tổng thể",
     "changelog": [
-      "Cải tiến xử lý những bài hát từ AI: Loại bỏ hoàn toàn tình trạng hỗn loạn node, mang lại âm thanh sạch, mượt và tự nhiên.",
-      "Studio Equalizer Supreme AI Matrix 2.0 - Xử lý âm thanh thông minh, chi tiết đến từng nốt nhạc.",
-      "Zero-GC Low-Latency Engine: Triệt tiêu độ trễ, ổn định cực cao ngay cả khi CPU tải nặng.",
-      "YouTube NonStop Ultra Mode: Phát mượt như bản gốc, không giật, không quảng cáo.",
-      "Audio-Technica AT2040 PureGenix V2 Signature: Âm thanh ấm, trong, đầy màu sắc và sức sống."
+      "Khôi phục Formant Engine: Sửa lỗi ẩn khiến bộ lọc tạo độ rõ giọng hát hoạt động sai vị trí bấy lâu nay — giọng hát giờ trong trẻo, tự nhiên đúng chuẩn.",
+      "Smart De-Esser AI: Tự nhận diện độ chói/rít của từng bài để giảm đúng mức cần thiết, không còn cắt cứng một kiểu cho mọi bài hát.",
+      "Cân bằng lại Dynamics Compressor: Giữ trọn độ nảy, chi tiết nhạc cụ (kick, gảy đàn...) thay vì bị nén phẳng như trước.",
+      "Ổn định Bass đa cấu hình: Triệt tiêu hiện tượng sụt bass khi đổi cấu hình hoặc kéo Pitch nhanh liên tục.",
+      "Favorites List phiên bản mới: Mở dạng cửa sổ riêng rộng rãi, hiện tên bài hát, tự cập nhật theo thời gian thực.",
+      "Thêm mục Ủng hộ dự án ngay trong ứng dụng."
     ],
     "youtube_link": "https://www.youtube.com/watch?v=67LFGmY8fw0",
     "show_popup": true
