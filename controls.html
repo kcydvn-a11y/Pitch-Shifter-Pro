@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Pitch Shifter Pro</title>
+ <link rel="stylesheet" href="controls.css">
+ <script src="jungle.js" defer></script>
+</head>
+
+<body data-theme="dark">
+ <div class="container">
+  <div class="header">
+   <h1 id="app-title" style="cursor: pointer;" title="Click to switch language">Pitch Shifter Pro</h1>
+   <div class="header-controls">
+    <button id="fav-icon" class="fav-icon" title="Add or remove song from favorites" aria-label="Add or remove from favorites">🧡</button>
+    <button id="fav-list-icon" class="fav-list-icon" title="Open favorites list" aria-label="Open favorites list">📜</button>
+    <button id="theme-toggle" class="theme-toggle" title="Switch between light and dark theme" aria-label="Switch between light and dark theme">🌙</button>
+    <button id="hold-btn" class="hold-btn" title="Enable/disable hold settings mode" aria-label="Enable/disable hold settings">🔓</button>
+    <label class="slideThree">
+     <input type="checkbox" id="enabled" title="Enable or disable Pitch Shifter Pro" aria-label="Enable/disable Pitch Shifter" checked>
+     <span class="slideThreeInner">
+      <span class="toggle-on">On</span>
+      <span class="toggle-off">Off</span>
+     </span>
+     <span class="slideThreeAfter"></span>
+    </label>
+   </div>
+  </div>
+  <div class="song-title-container">
+   <div id="song-title" class="song-title-text" title="Currently playing song" aria-live="polite">No songs yet</div>
+  </div>
+  <div id="bpm-value" class="bpm-value tooltip" title="Click to calculate BPM and key" aria-label="Current BPM">BPM: ...</div>
+  <div class="controls-wrapper">
+   <!-- Pitch Control -->
+   <div class="control-group">
+    <div class="label-row">
+     <label for="pitch">Pitch: <span id="pitch-value" aria-live="polite">0</span></label>
+     <select id="pitch-shift-type" title="Select pitch shift type: Semitone or Smooth ( ±2 Semitone = ±1 Tone )" aria-label="Select pitch shift type">
+      <option value="semi-tone">Semitone</option>
+      <option value="smooth">Smooth</option>
+     </select>
+    </div>
+    <div class="slider-row">
+     <input type="range" id="pitch" min="-12" max="12" step="0.5" value="0" title="Adjust audio pitch (semitone or smooth)" aria-valuemin="-12" aria-valuemax="12" aria-valuenow="0" aria-label="Adjust pitch">
+     <button id="pitch-reset" class="reset-btn" title="Reset pitch to default (0)" aria-label="Reset pitch to 0">Reset</button>
+    </div>
+   </div>
+   <!-- Playback Rate Control -->
+   <div class="control-group">
+    <div class="label-row">
+     <label for="playback-rate">Speed: <span id="playback-rate-value" aria-live="polite">1</span></label>
+    </div>
+    <div class="slider-row">
+     <input type="range" id="playback-rate" min="0.25" max="4" step="0.05" value="1" title="Adjust playback speed (0.25x to 4x)" aria-valuemin="0.25" aria-valuemax="4" aria-valuenow="1" aria-label="Adjust playback speed">
+     <button id="playback-rate-reset" class="reset-btn" title="Reset speed to default (1x)" aria-label="Reset speed to 1">Reset</button>
+    </div>
+   </div>
+   <!-- Boost Control -->
+   <div class="control-group">
+    <div class="label-row">
+     <label for="boost">Boost: <span id="boost-value" aria-live="polite">0.8</span></label>
+    </div>
+    <div class="slider-row">
+     <input type="range" id="boost" min="0.1" max="10" step="0.1" value="0.8" title="Adjust audio boost (0.1x to 10x)" aria-valuemin="0.1" aria-valuemax="10" aria-valuenow="0.8" aria-label="Adjust audio boost">
+     <button id="boost-reset" class="reset-btn" title="Reset boost to default (0.8x)" aria-label="Reset boost to 0.8">Reset</button>
+    </div>
+   </div>
+   <!-- Pan Control -->
+   <div class="control-group">
+    <div class="label-row">
+     <label for="pan">Pan: <span id="pan-value" aria-live="polite">0</span></label>
+    </div>
+    <div class="slider-row">
+     <input type="range" id="pan" min="-1" max="1" step="0.05" value="0" title="Adjust left-right audio balance (-1: left, 1: right)" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="0" aria-label="Adjust left-right balance">
+     <button id="pan-reset" class="reset-btn" title="Reset pan to center (0)" aria-label="Reset pan to 0">Reset</button>
+    </div>
+   </div>
+  </div>
+  <!-- Preset Buttons with Professional and Accurate Descriptions -->
+  <div class="preset-buttons">
+   <button id="preset-warm" class="preset-btn" title="Warm sound with deep, soft bass, smooth mids, and gentle treble. Optimized for Classical, Jazz, Acoustic, Bolero, and Ballad, delivering a relaxing, emotional, and authentic experience with natural vocals and a cozy soundstage.">Warm</button>
+   <button id="preset-bright" class="preset-btn" title="Bright, clear sound with sharp treble, light bass, and detailed mids. Ideal for Pop, EDM, Dance, and Rock, creating a vibrant, energetic, and lively soundstage with prominent instrument details and crisp vocals.">Bright</button>
+   <button id="preset-bass-heavy" class="preset-btn" title="Powerful, deep, and naturally expansive bass, balanced mids, and slightly softened treble. Optimized for EDM, Hip-Hop, Trap, and Dubstep, offering a booming, dynamic, and bass-rich experience with solid clarity and a wide soundstage.">Bass Heavy</button>
+   <button id="preset-vocal" class="preset-btn" title="Prominent mids, clear and natural vocals, light bass, and smooth treble. Perfect for Pop, Ballad, R&B, and Acoustic, highlighting emotive vocals with high clarity and detail, without distortion during pitch shifts.">Vocal</button>
+   <button id="preset-pro-natural" class="preset-btn" title="Natural sound with perfectly balanced bass, mids, and treble. Suitable for all genres, from Classical, Jazz, Pop, Rock, to Acoustic, providing an authentic, professional, and versatile audio experience with audiophile-grade detail.">Natural</button>
+   <button id="preset-karaoke-dynamic" class="preset-btn" title="Clear vocals, softened background music, balanced bass, and crisp treble. Optimized for Karaoke Pop, Ballad, Rock, and R&B, ensuring easy-to-sing, natural, and prominent vocals with a wide soundstage and no distortion during tone adjustments.">Karaoke</button>
+   <button id="preset-rock-metal" class="preset-btn" title="Solid bass, sharp mids, and powerful treble. Ideal for Rock, Metal, Punk, and Hard Rock, delivering a bold, intense, and energetic sound with clear instrument details and a dynamic soundstage.">Rock/M</button>
+   <button id="preset-smart-studio" class="preset-btn" title="Automatically optimizes bass, mids, and treble based on the song and listening environment. Suitable for all genres, from Pop, EDM, Classical, Jazz, Rock, to Karaoke, delivering professional, flexible, and flawless sound with natural vocals and an audiophile soundstage.">Smart.S</button>
+  </div>
+  <!-- NÚT DOWNLOAD COVER MỚI – MA MỊ PHÚ PHÉP, BASS ĐẠI PHÁT (GỐC ĐƠN GIẢN) -->
+  <div class="download-cover-container" style="text-align: center; margin: 18px 0 10px 0;">
+   <button id="download-cover-btn" class="download-cover-btn" title="Create and download a cover using current pitch, profile, and all HiFi AT2030 effects (high-quality .webm file with solid, natural bass)" aria-label="Download cover with current settings">
+    🎵 Cover
+   </button>
+  </div>
+  <!-- Refresh Button -->
+  <button id="refresh-btn" class="refresh-btn" title="Reset all settings to default" aria-label="Refresh Pitch Shifter state">⟳</button>
+  <!-- Donate Button -->
+  <button id="donate-btn" class="donate-btn" title="Support this project" aria-label="Support this project">❤️ Ủng hộ dự án</button>
+  <!-- Activation Section -->
+  <div class="activation-section">
+   <button id="buy-btn" class="buy-btn" title="Purchase a key to activate Pitch Shifter Pro" aria-label="Purchase activation key">Trial (30 Day)</button>
+   <span id="license-status" class="license-status" title="Current license status" aria-live="polite" style="display: none;"></span>
+  </div>
+  <!-- Donate Modal -->
+  <div id="donate-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="donate-title">
+   <div class="modal-content donate-modal-content">
+    <span id="donate-modal-close" class="modal-close" title="Close" aria-label="Close">×</span>
+    <h2 id="donate-title">❤️ ỦNG HỘ DỰ ÁN</h2>
+    <div class="donate-qr-wrap">
+     <img src="bank.png" alt="QR chuyển khoản ủng hộ" class="donate-qr-img" id="donate-qr-img">
+    </div>
+    <a id="donate-download-qr" class="donate-download-btn" href="bank.png" download="QR_Ung_Ho_Dai_Luan.png" title="Save QR image to your device">⬇ Lưu ảnh QR về máy</a>
+    <div class="donate-name">NGUYEN NGOC THAI THONG</div>
+    <div class="donate-account" id="donate-account-copy" title="Click to copy account number" tabindex="0" role="button">
+     9898661918 &bull; Vietcombank <span class="donate-copy-icon">📋</span>
+    </div>
+    <p class="donate-caption">Quét mã QR để ủng hộ kinh phí duy trì dự án.</p>
+    <div class="donate-contact">
+     <p class="donate-contact-label">📬 Gửi bộ hồ sơ thông tin đầu vào về hòm thư:</p>
+     <div class="donate-email" id="donate-email-copy" title="Click to copy email" tabindex="0" role="button">
+      📧 ThaiThongsj@gmail.com <span class="donate-copy-icon">📋</span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Author -->
+  <div class="author" id="author-icon" title="View Pitch Shifter Pro information" aria-label="View Pitch Shifter Pro information" tabindex="0">VN 💬</div>
+  <!-- Author Info Modal -->
+  <div id="author-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="author-title">
+   <div class="modal-content">
+    <span id="author-modal-close" class="modal-close" title="Close Pitch Shifter Pro information" aria-label="Close Pitch Shifter Pro information">×</span>
+    <h2 id="author-title">Welcome to Pitch Shifter Pro</h2>
+    <p id="author-message" aria-live="polite">
+     Pitch Shifter Pro is a professional audio application designed for precise pitch adjustment, delivering pristine Hi-Fi sound fidelity enabled by the new-generation HiFi AT2030 audio architecture. It blends quantum superposition for profile balance and entanglement to link bass, vocal, mid, and treble into a unified spectrum. Advanced wavelet smoothing, harmonic Fourier synthesis, and a formant-preserving vocoder matrix ensure natural tonal shifts and transient clarity. Intelligent AI adapts in real time to emotional and spectral changes, sculpting sound with precision across devices. Whether on low-performance hardware or studio-grade setups, HIFI AT2030 preserves vocal purity, spreads bass naturally, and harmonizes mid-treble without harshness—letting each note feel reborn, pure as an 18-year-old’s voice.<br><br>
+     To make Pitch Shifter Pro even better and to enhance its audio quality and features, we warmly invite your feedback and suggestions. Please share your thoughts with us at <a href="mailto:ThaiThongsj@gmail.com" style="color: #30d158; text-decoration: none; font-weight: bold; font-size: 0.8rem; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 5px;">
+      ThaiThongsj@gmail.com
+     </a><br><br>
+     Thank you for your support, and we wish you a wonderful day!<br>
+     Pitch Shifter Daimon Version 2.706.2095
+    </p><br>
+    <button id="author-modal-ok" class="ok-btn" title="Close Pitch Shifter Pro information" aria-label="Close Pitch Shifter Pro information">OK</button>
+   </div>
+  </div>
+
+  <div id="favorites-modal" class="fav-overlay" aria-hidden="true" role="dialog">
+   <div class="fav-modal-content">
+
+    <div class="fav-header">
+     <h2 id="favorites-title">Favorites List</h2>
+     <span id="modal-close" class="fav-close-btn" title="Close">×</span>
+    </div>
+
+    <input type="text" id="search-favorites" class="fav-search-input" placeholder="Search favorites...">
+
+    <div class="fav-table-container">
+     <table class="fav-table">
+      <thead>
+       <tr>
+        <th>#</th>
+        <th>Thumbnail</th>
+        <th>Pitch</th>
+        <th>Boost</th>
+        <th>Pan</th>
+        <th>BPM</th>
+        <th>Profile</th>
+        <th>Link</th>
+        <th>Action</th>
+       </tr>
+      </thead>
+      <tbody id="favorites-table-body"></tbody>
+     </table>
+    </div>
+
+    <div class="fav-footer">
+     <button id="export-btn" class="fav-btn">Export</button>
+     <button id="import-btn" class="fav-btn">Import</button>
+     <input type="file" id="import-file" accept=".json" style="display: none;">
+     <button id="clear-all-favorites" class="fav-btn-danger">Clear All</button>
+    </div>
+   </div>
+  </div>
+  <!-- Activation Modal -->
+  <div id="activation-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="activation-title">
+   <div class="modal-content">
+    <span id="activation-modal-close" class="modal-close" title="Close activation window" aria-label="Close activation window">×</span>
+    <h2 id="activation-title">Activate Pitch Shifter Pro</h2>
+    <div class="activation-form">
+     <label for="device-id">Device ID:</label>
+     <div class="device-id-container">
+      <input type="text" id="device-id" readonly title="Device ID for this device" aria-label="Device ID" />
+      <button id="copy-device-id" class="copy-btn" title="Copy Device ID" aria-label="Copy Device ID">📋</button>
+     </div>
+     <label for="activation-key">Activation Key:</label>
+     <input type="text" id="activation-key" placeholder="Enter activation key" title="Enter your activation key" aria-label="Enter activation key" />
+     <div id="activation-error" class="error-message" aria-live="assertive"></div>
+     <button id="activate-btn" class="activate-btn" title="Activate application with key" aria-label="Activate Pitch Shifter Pro">Activate</button>
+     <center>
+      <p class="email-instruction">Please send Device ID to email: ThaiThongsj@gmail.com</p>
+     </center>
+    </div>
+   </div>
+  </div>
+  <!-- Modal thông báo cập nhật -->
+  <div id="update-modal" class="modal-overlay">
+   <div class="modal-content">
+    <h2 id="update-title"></h2>
+    <p id="update-msg"></p>
+    <div id="update-video-container"></div>
+
+    <div class="checkbox-area">
+     <input type="checkbox" id="dont-show-again">
+     <label for="dont-show-again">Không hiển thị lại</label>
+    </div>
+
+    <div class="modal-actions">
+     <button id="btn-download" class="btn-primary">Tải về ngay</button>
+     <button id="btn-close-update" class="btn-secondary">Để sau</button>
+    </div>
+   </div>
+  </div>
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="success-title">
+   <div class="modal-content">
+    <span id="success-modal-close" class="modal-close" title="Close notification window" aria-label="Close activation success notification">×</span>
+    <h2 id="success-title">Activation Successful</h2>
+    <p id="success-message" aria-live="polite">Pitch Shifter Pro has been activated. Please restart the application to use all features.</p>
+    <button id="success-modal-ok" class="ok-btn" title="Close and refresh application" aria-label="Close and refresh">OK</button>
+   </div>
+  </div>
+  <!-- Overlay -->
+  <div id="value-overlay" class="overlay" aria-live="polite"></div>
+ </div>
+ <script src="data-i18n.js" defer></script>
+ <script src="controls.js" defer></script> 
+ <div class="overlay" id="lang-toast"></div>
+</body>
+
+</html>

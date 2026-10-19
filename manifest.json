@@ -1,0 +1,120 @@
+{
+    "manifest_version": 3,
+    "name": "Pitch Shifter Pro - HTML5 Video Audio FX",
+    "short_name": "Pitch Shifter Daimon",
+    "version": "2.706.2095",
+    "description": "Elevate your HTML5 video and audio with advanced pitch shifting, AI-driven EQ, real-time BPM detection, immersive spatial audio, nonstop YouTube playback without pause notifications, and new generation HiFi AT2030 audio. This cutting-edge technology ensures seamless, high-fidelity sound that feels natural and transcendent, with crisp bass, smooth vocals, and balanced mids/trebles—no distortion, muddiness, or artificial effects. Ideal for music enthusiasts, karaoke fans, content creators, and anyone seeking premium audio experiences on any device.",
+    "author": "VN (paltalk)",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        },
+        "default_popup": "controls.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+		"identity",
+        "downloads",
+        "tabs",
+        "scripting",
+        "webRequest",
+        "unlimitedStorage",
+        "clipboardWrite",
+        "alarms",
+		"notifications",
+		"cookies"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*",
+                "*://*.vimeo.com/*",
+                "*://*.soundcloud.com/*",            
+                "*://*.dailymotion.com/*",
+                "*://*.twitch.tv/*"
+            ],
+            "js": [
+                "jungle.js",
+                "content.js"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "*://*.youtube.com/*",
+                "*://*.m.youtube.com/*"
+            ],
+            "js": ["content2.js"],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://*.youtube.com/*",
+                "*://*.m.youtube.com/*"
+            ],
+            "js": ["content-main-world.js"],
+            "run_at": "document_start",
+            "all_frames": true,
+            "world": "MAIN"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "jungle.js",
+                "content.js",
+                "controls.html",
+                "controls.css",
+                "controls.js",
+                "bg.jpg",
+                "bg-light.png",
+                "icon16.png",
+                "icon48.png",
+                "icon48_disabled.png",
+                "icon128.png",
+                "audioWorker.js",
+				"data-i18n.js",
+                "activation.json"
+            ],
+            "matches": ["*://*/*"]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'; connect-src 'self' blob: https://www.youtube.com https://www.youtube-nocookie.com https://fonts.googleapis.com https://fonts.gstatic.com https://script.google.com https://script.googleusercontent.com https://www.cloudflare.com/cdn-cgi/trace https://cloudflare.com https://worldtimeapi.org/api/timezone/Etc/UTC https://www.youtube.com https://api.github.com http://worldclockapi.com/api/json/utc/now https://www.amazon.com https://cdn.jsdelivr.net https://time.google.com https://www.google.com https://raw.githubusercontent.com https://worldtimeapi.org;",
+        "sandbox": "sandbox allow-scripts; script-src 'self'"
+    },
+    "minimum_chrome_version": "102",
+    "options_ui": {
+        "page": "controls.html",
+        "open_in_tab": true
+    },
+    "sandbox": {
+        "pages": [
+            "sandbox/sandbox.html"
+        ]
+    },
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "commands": {
+        "toggle-pitch-shifter": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+P",
+                "mac": "Command+Shift+P"
+            },
+            "description": "Bật/tắt Pitch Shifter Pro"
+        }
+    }
+}
